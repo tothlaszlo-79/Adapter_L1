@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beágyazás", "Beágyazás\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kiegészítés", "Kiegészítés\Kiegészítés.csproj", "{50AFBBF2-ACFC-4D15-8635-DDF641957E0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI_Minta", "DI_Minta\DI_Minta.csproj", "{DAFE01B0-CC72-42FF-8070-2DA7F0829C3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{50AFBBF2-ACFC-4D15-8635-DDF641957E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50AFBBF2-ACFC-4D15-8635-DDF641957E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50AFBBF2-ACFC-4D15-8635-DDF641957E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAFE01B0-CC72-42FF-8070-2DA7F0829C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAFE01B0-CC72-42FF-8070-2DA7F0829C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAFE01B0-CC72-42FF-8070-2DA7F0829C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAFE01B0-CC72-42FF-8070-2DA7F0829C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
