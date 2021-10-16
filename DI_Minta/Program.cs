@@ -7,7 +7,14 @@ namespace DI_Minta
 	{
 		static void Main(string[] args)
 		{
+			//Konstruktor DI hívása
+			//var u = new Ügyfél(new Buborék());
 			var u = new Ügyfél(new Binalis());
+			
+			//tulajdonság DI hívása
+			u.Valami = new Buborék();
+			//Metódus DI hívása
+			u.RendezésMetódus(new Buborék());
 			u.Munka();
 			Console.ReadLine();
 
@@ -48,10 +55,23 @@ namespace DI_Minta
 			IRendez Rendező;
 			List<double> Adatok;
 
+			//tualjdonságon keresztüli DI megvalósítása
+			public IRendez Valami { get; set; }
+
+			//Metódus DI, hibát ad ha nincsen az Adatok tulajdonságban érték
+			public void RendezésMetódus(IRendez rendezo)
+            {
+				Kiír(rendezo.Rendez(Adatok, true));
+            }
+
 			public Ügyfél(IRendez R)
 			{
 				Rendező = R;
+				//Adatok feltöltése, hogy ne adjon hibát a DI lehetőségeknél
+				Feltölt(10);
 			}
+
+			
 
 			void Feltölt(int db)
 			{
@@ -70,7 +90,7 @@ namespace DI_Minta
 
 			public void Munka()
 			{
-				Feltölt(10);
+				
 				Console.WriteLine("Az eredeti számsor:");
 				Kiír(Adatok);
 				var Növekvő = Rendező.Rendez(Adatok, true);

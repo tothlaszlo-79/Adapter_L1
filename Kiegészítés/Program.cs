@@ -45,27 +45,6 @@ namespace Kiegészítés
                 Console.WriteLine(n.Vezetéknév + "\t" + n.Utónév + "\t" + "\t" + n.TeljesNév);
             }
         }
-        public class Adapter : INév
-        {
-            Személy Személy;
-            public string TeljesNév
-            {
-                get { return Személy.Vezetéknév + " " + Személy.Utónév; }
-            }
-            public string Vezetéknév
-            {
-                get { return Személy.Vezetéknév; }
-                set { Személy.Vezetéknév = value; }
-            }
-            public string Utónév
-            {
-                get { return Személy.Utónév; }
-                set { Személy.Utónév = value; }
-            }
-            public Adapter(string V, string U)
-            {
-                Személy = new Személy(V, U);
-            }
-        }
+      
     }
 }

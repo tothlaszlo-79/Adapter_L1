@@ -36,9 +36,11 @@ namespace Adapter_L1
                 Console.WriteLine(n.Vezetéknév + "\t" + n.Utónév + "\t" + "\t" + n.TeljesNév);
             }
         }
+
         class Adapter : Személy, INév
         {
             public Adapter(string V, string U) : base(V, U) { }
+
             public string TeljesNév
             {
                 get
