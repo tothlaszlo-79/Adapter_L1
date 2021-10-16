@@ -12,7 +12,7 @@ namespace DI_Minta
 			var u = new Ügyfél(new Binalis());
 			
 			//tulajdonság DI hívása
-			u.Valami = new Buborék();
+			u.DITulajdonsag = new Buborék();
 			//Metódus DI hívása
 			u.RendezésMetódus(new Buborék());
 			u.Munka();
@@ -56,7 +56,7 @@ namespace DI_Minta
 			List<double> Adatok;
 
 			//tualjdonságon keresztüli DI megvalósítása
-			public IRendez Valami { get; set; }
+			public IRendez DITulajdonsag { get; set; }
 
 			//Metódus DI, hibát ad ha nincsen az Adatok tulajdonságban érték
 			public void RendezésMetódus(IRendez rendezo)
@@ -90,7 +90,8 @@ namespace DI_Minta
 
 			public void Munka()
 			{
-				
+				//Tulajdonságon keresztük lapott DI meghívása
+				//DITulajdonsag.Rendez(Adatok, true);
 				Console.WriteLine("Az eredeti számsor:");
 				Kiír(Adatok);
 				var Növekvő = Rendező.Rendez(Adatok, true);

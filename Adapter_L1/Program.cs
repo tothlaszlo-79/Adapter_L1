@@ -15,7 +15,10 @@ namespace Adapter_L1
 
         public class Személy
         {
-            public Személy(string V, string U) { Vezetéknév = V; Utónév = U; }
+            public Személy(string V, string U) {
+                Vezetéknév = V; 
+                Utónév = U; 
+            }
             public string Vezetéknév { get; set; }
             public string Utónév { get; set; }
         }

@@ -40,6 +40,7 @@ namespace Beágyazás
         public class Adapter : INév
         {
             Személy Személy;
+
             public string TeljesNév
             {
                 get { return Személy.Vezetéknév + " " + Személy.Utónév; }
