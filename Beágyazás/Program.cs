@@ -60,5 +60,7 @@ namespace Beágyazás
                 Személy = new Személy(V, U);
             }
         }
+
+ 
     }
 }
